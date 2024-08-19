@@ -1,0 +1,7 @@
+RewriteEngine ON
+RewriteRule ^login(\.php)? login.php [L]
+RewriteRule ^refresh(\.php)? refresh.php [L]
+RewriteRule ^logout(\.php)? logout.php [L]
+RewriteRule . index.php [L]
+
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
